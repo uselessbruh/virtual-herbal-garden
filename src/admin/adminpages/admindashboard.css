@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Pirata+One&family=Rubik+Glitch+Pop&family=Rubik+Puddles&display=swap');
+.Maindashboard{
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(122, 151, 122, 0.76);
+}
+
+.displayadminuser{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: forestgreen;
+    padding: 0px;
+}
+
+.allthedashbuttons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 100, 65, 0.596);
+    height: 400px;
+    width: 600px;
+    gap: 40px;
+    border-radius: 30px;
+}
+
+.changeinformation , .changescript{
+    height: 100px;
+    width: 400px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 35px;
+    color: rgb(46, 83, 3);
+    font-weight: bold;
+    background-color: rgb(160, 182, 170);
+    font-family: "Mountains of Christmas", serif;
+}
+
+.logoutorgarden{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.logoutbuttononadmin, .gardenbuttontoadmin{
+    height: 30px;
+    width: 100px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    background-color: rgb(160, 182, 170);
+}

@@ -1,0 +1,302 @@
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.admindashbutton {
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    top: 10px;
+    right: 10px;
+    border: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.gardendashbutton {
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    border: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.changedbmain {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.topbardash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    background-color: green;
+    margin-top: -100px;
+    color: black;
+    gap: 20px;
+}
+
+.searchresult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #857f7fb9;
+    border-radius:50px;
+    width: 340px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 29;
+
+    button{
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        background-color: #131212c9;
+        color: white;
+    }
+}
+
+.dashsearchbutton {
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: rgb(207, 216, 207);
+    cursor: pointer;
+}
+
+.dashsearchbar {
+    height: 30px;
+    border: none;
+    width: 350px;
+    border-radius: 40px;
+    outline: none;
+    background-color: #d6d0ba;
+    padding-left: 10px;
+}
+
+.changedmunder {
+    height: 80%;
+    width: 90%;
+    background-color: rgb(219, 218, 211);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerboxinfo {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(225, 225, 235);
+    border: ridge 10px;
+    border-radius: 20px;
+}
+
+.imgbarchange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    width: 550px;
+    background-color: transparent;
+    border-right: 2px solid rgba(37, 37, 37, 0.151);
+}
+
+.commitandnewbutton {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 3px;
+
+    
+}
+
+.butset1, .butset2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+            border: none;
+            outline: none;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 40px;
+        }
+}
+
+.nopointerforbutton{
+    cursor: not-allowed;;
+    background-color: rgba(187, 199, 211, 0.911);
+}
+
+.resetbutton{
+    background-color: rgb(107, 118, 128);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.nontruestatebutton{
+    background-color: rgb(107, 118, 128);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.imagedisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.tobechangedimages {
+    display: flex;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(204, 199, 199);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img{
+        height: 230px;
+        width: 230px;
+        object-fit: cover;
+        padding: 10px;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+
+    p{
+        word-break:break-all;
+       
+    }
+
+}
+
+.contentchange {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(235, 230, 223, 0.733);
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.contentchange::-webkit-scrollbar {
+    width: 5px;
+}
+
+.contentchange::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.contentchange::-webkit-scrollbar-thumb {
+    background-color: #0e0d0d;
+    border-radius: 10px;
+}
+
+.contentchange::-webkit-scrollbar-thumb:hover {
+    background-color: #161515;
+}
+
+.infoarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+    p {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+    }
+}
+
+.infoareatitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    margin-top: 15px;
+
+    p {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+    }
+}
+
+.singleinput {
+    input {
+        height: 40px;
+        max-width: 600px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
+}
+
+.multiinput {
+    textarea {
+        height: 300px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
+
+    textarea::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    textarea::-webkit-scrollbar-track {
+        background-color: rgb(221, 218, 209);
+        border-radius: 10px;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border-radius: 10px;
+    }
+
+    textarea::-webkit-scrollbar-thumb:hover {
+        background-color: #d3b9b9;
+    }
+}

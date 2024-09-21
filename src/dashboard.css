@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Pirata+One&family=Rubik+Glitch+Pop&family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Rubik+Glitch+Pop&display=swap');
+
+.dashboardcontent {
+    background-image: url("./components/entrance.png");
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.maindiv {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.adminlogodiv {
+    display: flex;
+    position: absolute;
+    background-color: #1a1a1a93;
+    top: 1.5%;
+    right: 0.5%;
+    height: 55px;
+    width: 55px;
+    z-index: 31;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+
+    img {
+        padding: 0px;
+        height: 25px;
+        width: 25px;
+        filter: brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(180deg);
+    }
+}
+
+.resctictedgarden {
+    display: flex;
+    position: absolute;
+    background-color: #1a1a1a93;
+    top: 7.5%;
+    right: 0.5%;
+    height: 55px;
+    width: 55px;
+    z-index: 31;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+
+    img {
+        padding: 0px;
+        height: 35px;
+        width: 35px;
+        filter: brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(180deg);
+    }
+}
+
+.searchtitle {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.searchbar {
+    background-color: #363d35e4;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    outline: none;
+    box-shadow: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 20px;
+}
+
+.searchbutton {
+    height: 60px;
+    width: 100px;
+    padding: 10px;
+    background-color: #121212e4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.results-container {
+    margin-top: 110px;
+    position: relative;
+    left: 46%;
+    transform: translateX(-50%);
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 488px;
+    z-index: 2;
+    overflow-y: scroll;
+    border-radius: 20px;
+    padding: 0px;
+    line-height: 0;
+
+
+}
+
+.result-item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    margin-bottom: -10px;
+    border-radius: none;
+    background-color: #234031b2;
+    width: 88%;
+    cursor: pointer;
+    color: rgb(186, 212, 190);
+    border-radius: 5px;
+    height: 100px;
+    text-overflow: hide;
+}
+
+.dropdown-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 33;
+    top: 4%;
+    left: 2%;
+}
+
+.dropdown-button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Mountains of Christmas", serif;
+    font-size: 20px;
+
+    img {
+        height: 40px;
+        width: 40px;
+        filter: brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(180deg);
+    }
+
+}
+
+.dropdownimg {
+    height: 10px;
+    width: 10px;
+    z-index: 33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: -5px;
+    border-radius: 50%;
+
+    img {
+        height: 50px;
+        width: 50px;
+        filter: brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(180deg) drop-shadow(10px 10px 10px rgb(0, 0, 0));
+        cursor: pointer;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+    width: 80px;
+    background-color: #1a1a1a00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 110px;
+    opacity: 0;
+    transition: max-height 0.9s ease, opacity 0.9s ease, transform 0.9s ease;
+    transform: translateY(-10px);
+    z-index: 10;
+    margin-top: 40px;
+    padding: 10px;
+    gap: 40px;
+}
+
+.dropdown-menu.open {
+    max-height: 450px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu.closed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.dropdown-menu div:hover {
+    background-color: #c5bcbc36;
+}
+
+.dropdown-menu div:active {
+    background-color: #00000036;
+}
+
+.results-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.results-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.plantinformresults-containeration::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+.entergardenbutton {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 37.5%;
+    left: 55.5%;
+    transform: translate(-50%, -50%);
+    border: none;
+    z-index: 1;
+}
+
+.underbutton {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgb(5, 30, 30);
+    cursor: pointer;
+    font-size: 70px;
+    border: none;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+
+.gardentitle {
+    position: absolute;
+    bottom: 50px;
+    left: 300px;
+    background: linear-gradient(to right, #1a1a1aa2 30%, #4e43437a 80%, rgba(54, 65, 72, 0) 100%);
+    width: 800px;
+    transform: translateX(-50%);
+    font-size: 20px;;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-left: 20px;
+        color: rgb(240, 224, 205);
+        font-family: "Mountains of Christmas", serif;
+        font-weight: 100;
+        font-size: 50px;
+        line-height: 60px;
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+        display: inline-block;
+    }
+
+    h1 span {
+        display: inline-block;
+        animation: breathe 4s infinite both;
+        animation-delay: calc(var(--char-index) * 0.1ms);
+    }
+
+
+    h1 span:nth-child(1) {
+        --char-index: 0;
+    }
+
+    h1 span:nth-child(2) {
+        --char-index: 1;
+    }
+
+    h1 span:nth-child(3) {
+        --char-index: 2;
+    }
+
+    h1 span:nth-child(4) {
+        --char-index: 3;
+    }
+
+    h1 span:nth-child(5) {
+        --char-index: 4;
+    }
+
+    h1 span:nth-child(6) {
+        --char-index: 5;
+    }
+
+    h1 span:nth-child(7) {
+        --char-index: 6;
+    }
+
+    h1 span:nth-child(8) {
+        --char-index: 7;
+    }
+
+    h1 span:nth-child(9) {
+        --char-index: 8;
+    }
+
+    h1 span:nth-child(10) {
+        --char-index: 9;
+    }
+
+    h1 span:nth-child(11) {
+        --char-index: 10;
+    }
+
+    h1 span:nth-child(12) {
+        --char-index: 11;
+    }
+
+    h1 span:nth-child(13) {
+        --char-index: 12;
+    }
+
+    h1 span:nth-child(14) {
+        --char-index: 13;
+    }
+
+    h1 span:nth-child(15) {
+        --char-index: 14;
+    }
+
+    h1 span:nth-child(16) {
+        --char-index: 15;
+    }
+
+    h1 span:nth-child(17) {
+        --char-index: 16;
+    }
+
+    h1 span:nth-child(18) {
+        --char-index: 17;
+    }
+
+    h1 span:nth-child(19) {
+        --char-index: 18;
+    }
+
+    h1 span:nth-child(20) {
+        --char-index: 19;
+    }
+
+    h1 span:nth-child(21) {
+        --char-index: 20;
+    }
+
+    h1 span:nth-child(22) {
+        --char-index: 21;
+    }
+
+    h1 span:nth-child(23) {
+        --char-index: 22;
+    }
+
+    h1 span:nth-child(24) {
+        --char-index: 23;
+    }
+
+
+
+    h1:hover span {
+        animation-play-state: paused;
+    }
+
+}
+
+@keyframes rustle {
+    0% {
+        transform: rotate(0.75deg) translateY(0px) translateX(0px);
+        transform-origin: bottom center;
+    }
+
+    25% {
+        transform: rotate(-0.75deg) translateY(-0.75px) translateX(-0.75px);
+        transform-origin: bottom center;
+    }
+
+    50% {
+        transform: rotate(0.75deg) translateY(0.75px) translateX(0.75px);
+        transform-origin: bottom center;
+    }
+
+    75% {
+        transform: rotate(-0.75deg) translateY(-0.75px) translateX(-0.75px);
+        transform-origin: bottom center;
+    }
+
+    100% {
+        transform: rotate(0.75deg) translateY(0px) translateX(0px);
+        transform-origin: bottom center;
+    }
+
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

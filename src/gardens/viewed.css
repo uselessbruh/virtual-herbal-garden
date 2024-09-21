@@ -1,0 +1,199 @@
+.viewplantcontainer {
+  width: 95vw;
+  height: 90vh;
+  padding: 30px;
+  background-color: rgba(36, 41, 37, 0.909);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  z-index: 34;
+  animation: slideIn 0.5s ease-out;
+  gap: 40px;
+  
+}
+
+@keyframes slideIn {
+
+
+  from {
+    transform: translateY(+50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #1a1b1aaa;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+}
+
+.plantimages {
+  height: 100%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.medimg-container{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 575px;
+  padding: 30px;
+  background-color: #ddb497;
+  border-radius: 10px;
+  position: absolute;
+  top: 0%;
+  bottom: .5%;
+  left: 0%;
+  right: -24.6%;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  z-index: 34;
+  backdrop-filter: blur(10000px);
+  overflow-y: scroll;
+  background-image: url("../components/panel.png");
+  background-attachment: fixed;
+
+  h3{
+    font-size: 30px;
+  }
+}
+
+.plantimg {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 30px;
+  background-color: rgba(31, 35, 31, 0.681);
+  object-fit: cover;
+  img{
+    animation: zoomIn 2s 1, rustle 5s ease-in-out infinite;
+  }
+}
+.medimg {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 30px;
+  background-color: rgba(31, 35, 31, 0.681);
+  object-fit: cover;
+  animation: zoomIn 2s 1, pulse 2s 2s infinite;
+}
+.plantinformation {
+  display: grid;
+  width: 2056px;
+  margin-top: 15px;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: rgba(22, 23, 22, 0.365);
+  border-radius: 10px;
+  gap: 30px;
+
+  p {
+    text-align: justify;
+  }
+
+}
+
+.smallline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 28px;
+  }
+}
+
+.textspacebetween{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: auto;
+}
+
+.textspacebetween h2,
+.textspacebetween p {
+  margin: 0;
+  padding: 0; 
+}
+
+.textspacebetween h2 {
+  margin-bottom: 5px; 
+}
+
+.textspacebetween p {
+  margin-top: 5px; 
+}
+
+.plantinformation::-webkit-scrollbar {
+  width: 5px;
+}
+
+.plantinformation::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.plantinformation::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.plantinformation::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.medimg-container::-webkit-scrollbar {
+  width: 5px;
+  height: 30px;
+}
+
+.medimg-container::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 10px;
+}
+
+.medimg-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.medimg-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+
