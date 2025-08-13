@@ -9,21 +9,28 @@ import Chatbot from "./components/chatbot.png";
 import MultiChat from "./components/multichat.png";
 import InfoIcon from "./components/infoicon.png";
 import ShopIcon from "./components/shop.png";
-import RestrictGarden from "./components/restrictgarden.png"
+import RestrictGarden from "./components/restrictgarden.png";
+import settingslogo from "./components/settings.png";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebaseConfig";
+import InfoPage from "./infopage/InfoPage";
 
 const Dashboard = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [selectedPlant, setSelectedPlant] = useState(null);
   const [isExploreOpen, setIsExploreOpen] = useState(false);
+  const [isInfopageOpen, setInfopageOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const navigate = useNavigate();
   const db = getFirestore();
 
   const handleSearchChange = (e) => setSearch(e.target.value);
+
+  const handleinfobuttonclick = () => {
+    setInfopageOpen(prevState=>!prevState);
+  }
 
   const toggleDropdown = () => {
     setIsExploreOpen(!isExploreOpen);
@@ -108,6 +115,9 @@ const Dashboard = () => {
       </div>
       <div className="resctictedgarden" title="rescticted garden" onClick={handleadminlogin} >
         <img src={RestrictGarden} />
+      </div>
+      <div className="settingslogo" title="settings" onClick={handleinfobuttonclick} >
+        <img src={settingslogo} />
       </div>
       <div ref={dropdownRef} className="dropdown-container">
         <button onClick={toggleDropdown} className="dropdown-button">
@@ -196,6 +206,7 @@ const Dashboard = () => {
           </h1>
         </div>
       </div>
+      {isInfopageOpen && <InfoPage/>}
     </div>
   );
 };

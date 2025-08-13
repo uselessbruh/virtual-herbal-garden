@@ -18,11 +18,9 @@ const HowAreYouPage = lazy(() => import('./admin/adminpages/HowAreYouPage'));
 const BackgroundMusicWrapper = () => {
   const location = useLocation();
 
-  const noplayadminlog = location.pathname !== '/admin-login';
+  const noplayadminlog = !['/admin-login', '/admin-dashboard', '/admin/change-script'].includes(location.pathname);
 
-  const noplayadmindash = location.pathname !== '/admin-dashboard';
-
-  return noplayadminlog && noplayadmindash ? <BackgroundMusic /> : null;
+  return noplayadminlog ? <BackgroundMusic /> : null;
 };
 
 function App() {
