@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
   <br/>
-  <img src="https://img.shields.io/github/license/uselessbruh/virtual-herbal-garden?style=flat-square&color=green" alt="License"/>
   <img src="https://img.shields.io/github/stars/uselessbruh/virtual-herbal-garden?style=flat-square&color=yellow" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/uselessbruh/virtual-herbal-garden?style=flat-square&color=blue" alt="Forks"/>
 </div>
